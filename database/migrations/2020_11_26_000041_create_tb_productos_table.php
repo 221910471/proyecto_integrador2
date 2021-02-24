@@ -21,6 +21,7 @@ class CreateTbProductosTable extends Migration
             $table->string('descripcion');
             $table->float('medida',10,5);
             $table->float('precio_oferta',10,5);
+            $table->string('img');
             $table->timestamps();
         });
     }
