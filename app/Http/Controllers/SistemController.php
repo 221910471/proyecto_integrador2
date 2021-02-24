@@ -75,7 +75,7 @@ class SistemController extends Controller
             'apm'        =>$request->input('apm'),
             'pass'       =>$request->input('pass'),
             'tel'        =>$request->input('tel'),
-            'matricula'  =>$request->input('matricula'),
+            'tipo_usuario'  =>$request->input('tipo_usuario'),
             'fn'         =>$request->input('fn')
             
          ));
@@ -90,7 +90,7 @@ class SistemController extends Controller
     }
     public function salvar(UsuariosModel $id, Request $request){
 
-             $id->update($request->only('nombre', 'email', 'app' , 'apm' , 'pass', 'tel','matricula','fn'));
+             $id->update($request->only('nombre', 'email', 'app' , 'apm' , 'pass', 'tel','tipo_usuario','fn'));
 
             return redirect()->route('usuarios');
     }

@@ -9,17 +9,14 @@ class UsuariosModel extends Model
     protected $table = 'tb_usuario';
     protected $primaryKey = 'id_usuario';
     protected $fillable = [
-       'nombre',
-       'email',
-       'app',
-       'apm',
-       'pass',
-       'tel',
-       'matricula',
-       'fn',
-       'tipo_usuario',
-       'id_usuario',
-       'img'
+        'nombre',
+        'email',
+        'app',
+        'apm',
+        'pass',
+        'tel',
+        'fn',
+        'tipo_usuario',
     ];
 
     
