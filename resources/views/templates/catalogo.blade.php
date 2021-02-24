@@ -85,19 +85,18 @@
 
 							</div>
 							<div class="card">
-								<div class="row  justify-content-center">
+								<div class="row justify-content-center">
 									
 									@forelse($usus as $usu)
 									<div class="col-4 border p-5 mt-5 text-center">
 										<img src="{{ asset('img/'.$usu->img) }} " alt="Imagen" width="200" height="200">
 										
-										<div class="container">
+										
 											{{ $usu->nombre_producto}}<br>
 											{{ $usu->no_existencias}}<br>
 											{{ $usu->descripcion}}<br>
 											{{ $usu->medida }}<br>
 											<P>$ {{ $usu->precio_oferta}}</P>
-										</div>
 										
 										<a href="{{ route('detalleProducto', ['id' => $usu->id_producto]) }}" class="button big" role="button" aria-pressed="true">Detalle</a><br></br>
 
