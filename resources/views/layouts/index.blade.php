@@ -70,9 +70,7 @@
 							
 							</div>
 						</article>
-						<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
-													<script>paypal.Buttons().render('body');</script>
-												
+						 
 						<!-- <article>
 							<span class="icon solid fa-rocket"></span>
 							<div class="content">

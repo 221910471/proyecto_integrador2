@@ -20,7 +20,7 @@ class CreateTbUsuarioTable extends Migration
             $table->string('apm',45);
             $table->string('email',45);
             $table->Integer('tipo_usuario');
-            $table->Integer('tel');
+            $table->Integer('tel',18);
             $table->string('pass',45);
             $table->date('fn');
             

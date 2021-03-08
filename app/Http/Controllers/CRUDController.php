@@ -38,16 +38,6 @@ class CRUDController extends Controller
             ->with(['todos' => $todos]);
         }
 
-        public function direcciones()
-        {
-            $usus = DireccionesModel::all();
-            $comps = UsuariosModel::all();
-            return  view("templates.direcciones")
-            ->with(['usus' => $usus])
-            ->with(['comps' => $comps]);
-
-        }
-
         
         public function modificarVentas(VentasModel $id){
             return view("templates.editarVentas")
@@ -98,6 +88,46 @@ class CRUDController extends Controller
         }
 
         public function borrarMaterial(MaterialesModel $id){
+            $id->delete();
+            return redirect()->route('materiales');
+        }
+
+        //--------------------------- direcciones -----------------------------------------------
+    
+
+        public function Direcciones()
+        {
+            $usus = DireccionesModel::all();
+            $comps = UsuariosModel::all();
+            return  view("templates.direcciones")
+            ->with(['usus' => $usus])
+            ->with(['comps' => $comps]);
+
+        }
+
+        public function registrarDirecciones() {
+            return  view("templates.registrar_direccion");
+        }
+        
+        public function guardarDirecciones(ValidarMaterialesRequest $request){
+    
+            $usus = MaterialesModel::create($request->only('nombre', 'tipo_material'));
+            return redirect()->route('registrarMateriales');
+        }
+        
+        public function modificarDirecciones(MaterialesModel $id){
+            return view("templates.editarMateriales")
+                ->with(['usu' => $id]);
+        }
+        public function salvarDirecciones(MaterialesModel $id, Request $request){
+
+                //  $id = AlumnosModel::find($id);
+                 $id->update($request->only('nombre', 'tipo_material'));
+
+                return redirect()->route('iniciar_sesion');
+        }
+
+        public function borrarDireccion(MaterialesModel $id){
             $id->delete();
             return redirect()->route('materiales');
         }

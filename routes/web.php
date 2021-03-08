@@ -112,6 +112,21 @@ Route::post('/cart-removeitem',  'CartController@removeitem')->name('cart.remove
 
 Route::name('reporte')->get('reporte/', 'SistemController@reporte');
 
+
+//------------------------------------------Direcciones--------------------------------------------------------------
+
+// Route::name('direcciones')->get('productos/{buscar?}', 'CRUDController@direcciones');
+
+// Route::name('guardarDirecciones')->post('guardarDirecciones/', 'CRUDController@guardarDirecciones');
+
+// Route::name('registrarDirecciones')->get('registrarDirecciones/', 'CRUDController@registrarDirecciones');
+
+// Route::name('modificarDirecciones')->get('modificarDirecciones/{id}', 'CRUDController@modificarDirecciones');
+
+// Route::name('salvarDirecciones')->put('salvarDirecciones/{id}', 'CRUDController@salvarDirecciones');
+
+// Route::name('borrarDireccion')->get('borrarDireccion/{id}', 'CRUDController@borrarDireccion');
+
 //------------------------------------------ MIO --------------------------------------------------------------
 
 Route::name('guardarVentas')->get('guardarVentas/{id?}', 'CrudController@guardarVentas');

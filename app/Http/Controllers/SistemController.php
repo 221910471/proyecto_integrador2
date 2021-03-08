@@ -61,26 +61,27 @@ class SistemController extends Controller
     public function guardar(Request $request){
 
          
-        $file = $request ->file('img');
-        $img = $file -> getClientOriginalName();
-        // $img = $request -> file('img')->getClientOriginalName();
+        // $file = $request ->file('img');
+        // $img = $file -> getClientOriginalName();
+        // // $img = $request -> file('img')->getClientOriginalName();
     
-        \Storage::disk('local')->put($img, \File::get($file));
+        // \Storage::disk('local')->put($img, \File::get($file));
     
          $usu = UsuariosModel::create(array(
-            'img' => $img,
             'nombre'     =>$request->input('nombre'),
-            'email'      =>$request->input('email'),
             'app'        =>$request->input('app'),
             'apm'        =>$request->input('apm'),
+            'fn'         =>$request->input('fn'),
             'pass'       =>$request->input('pass'),
+            'email'      =>$request->input('email'),
             'tel'        =>$request->input('tel'),
-            'tipo_usuario'  =>$request->input('tipo_usuario'),
-            'fn'         =>$request->input('fn')
+            'tipo_usuario'  =>$request->input('tipo_usuario')
             
          ));
     
+        // return redirect()->route('registrarDirecciones');
         return redirect()->route('iniciar_sesion');
+        
 
     }
 
@@ -90,7 +91,7 @@ class SistemController extends Controller
     }
     public function salvar(UsuariosModel $id, Request $request){
 
-             $id->update($request->only('nombre', 'email', 'app' , 'apm' , 'pass', 'tel','tipo_usuario','fn'));
+             $id->update($request->only('nombre', 'app' , 'apm' , 'fn', 'email', 'pass', 'tel','tipo_usuario'));
 
             return redirect()->route('usuarios');
     }

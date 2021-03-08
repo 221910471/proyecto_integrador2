@@ -53,26 +53,39 @@
 				<div>
 
 
-					<div class="card">
-						<img src="{{ asset('img/'.$usu->img) }}" alt="Imagen" width="200" height="200">
-						<div class="container">
-							Nombre del producto: {{ $usu->nombre_producto}} <br>
-							Numero de existencias actuales: {{ $usu->no_existencias}} <br>
-							Precio: {{ $usu->precio }} <br>
-							Descripcion: {{ $usu->descripcion}} <br>
-							Medida: {{ $usu->medida }} <br>
-							Precio de oferta: {{ $usu->precio_oferta}} <br>
-							<br></br>
-							<form action="{{route('cart.add')}}" method="post">
-								@csrf
-								<input type="hidden" name="producto_id" value="{{$usu->id_producto}}">
-								<input type="submit" name="btn" class="btn btn-success" value="AÑADIR AL CARRITO">
-							</form>
-							<a href="{{ route('catalogo')}}" class="button big">Regresar</a><br>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="card">
+							<div class="card-body">
+								<img src="{{ asset('img/'.$usu->img) }}" alt="Imagen" width="600" height="600">
+							</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="container">
+										Nombre del producto: <br> 
+										<h2>{{ $usu->nombre_producto}}</h2> <br>
+										Numero de existencias actuales: {{ $usu->no_existencias}} <br>
+										Precio: <del> $ {{ $usu->precio }} </del><br>
+										Descripcion: {{ $usu->descripcion}} <br>
+										Medida: {{ $usu->medida }} <br>
+										Precio de oferta: <br> 
+										<h4>$ {{ $usu->precio_oferta}} </h4><br>
+										<br></br>
+										<form action="{{route('cart.add')}}" method="post">
+											@csrf
+											<input type="hidden" name="producto_id" value="{{$usu->id_producto}}">
+											<input type="submit" name="btn" class="btn btn-success" value="AÑADIR AL CARRITO">
+										</form>
+										<a href="{{ route('catalogo')}}" class="button big">Regresar</a><br>
 
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-
 
 
 
@@ -80,6 +93,7 @@
 
 			</div>
 		</div>
+		
 
 		@include ('layouts.menu')
 

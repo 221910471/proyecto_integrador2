@@ -76,16 +76,16 @@
                         //------------------- Indica errores: si existen caracteres especiales
                         if(cont > 0){
                             document.getElementById("error").innerHTML = "Error: La contraseña solo debe de contener letras y numeros";
-                            document.getElementById("pass1").style.cssText = 'color: #F00; border: solid 1px #F00;';
+                            document.getElementById("pass").style.cssText = 'color: #F00; border: solid 1px #F00;';
                             document.getElementById("nivel").innerHTML = " ";
                         }
                         else{
-                            document.getElementById("pass1").style.cssText = 'color: #000; border: solid 1px #000;';
+                            document.getElementById("pass").style.cssText = 'color: #000; border: solid 1px #000;';
                         }
 
                     }
                     else{
-                        document.getElementById("pass1").style.cssText = 'color: #F00; border: solid 1px #F00';
+                        document.getElementById("pass").style.cssText = 'color: #F00; border: solid 1px #F00';
                         document.getElementById("nivel").style.cssText = 'border-style:none;';
                         document.getElementById("nivel").innerHTML = " ";
                         document.getElementById("error").innerHTML = "Error: El primer carácter debe ser una letra mayuscula";
@@ -93,7 +93,7 @@
                     }
                 }
                 else{
-                    document.getElementById("pass1").style.cssText = 'color: #000; border: solid 1px #000';
+                    document.getElementById("pass").style.cssText = 'color: #000; border: solid 1px #000';
                     document.getElementById("nivel").innerHTML = " ";
                     document.getElementById("error").innerHTML = " ";
                 }
@@ -152,23 +152,44 @@
 					
 					<div>
 						<td>E-mail: </td>
-                        <td><input type="text" id="mail" class="mail" name="mail"></td>
-                        <td><span id="smail" class="smail"></span></td>
+                        <td><input type="text" id="email" class="email" name="email"></td>
+                        <td><span id="semail" class="semail"></span></td>
 					</div>
 					@if($errors->first('email')) <i>{{$errors -> first ('email')}}</i>@endif
 
 					<div>
-						Contraseña: <input type="password" id="pass1" onkeyup="evaluar(this);">
+						Contraseña: <input type="text" id="pass" name="pass" onkeyup="evaluar(this);">
                     	<b id="nivel"></b>
                     	<b id="error"></b>
 					</div>
 					@if($errors->first('pass')) <i>{{$errors -> first ('pass')}}</i>@endif
 					<div>
-						Telefono : <input type="text" name="telefono" value="{{ old('tel')}}" id="telefono"><br>
+						Telefono : <input type="text" name="tel" value="{{ old('tel')}}" id="tel"><br>
 						@if($errors->first('tel')) <i>{{$errors -> first ('tel')}}</i>@endif
 					</div>
 					<!-- Imagen : <input type="file" name="img"><br>
 					<hr> -->
+
+                    <div>
+                        Tipo de cuenta: <br> <br>
+                        <div>
+                            <input type="radio" id="tipo_usuario" name="tipo_usuario" value="1"
+                                    checked>
+                            <label for="1">Administrador</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="tipo_usuario" name="tipo_usuario" value="2">
+                            <label for="2">Usuario</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="tipo_usuario" name="tipo_usuario" value="3">
+                            <label for="3">Técnico</label>
+                        </div>
+                        @if($errors->first('tipo_usuario')) <i>{{$errors -> first ('tipo_usuario')}}</i>@endif
+                    </div>
+                    
 
 					<input type="submit" value="Enviar">
 				</form>
@@ -178,12 +199,12 @@
 		<script>
 		$(document).ready(function(){
 
-			$("#mail").blur(function(){
-                        var txtmail = $("#mail").val();
-                        var valmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+			$("#email").blur(function(){
+                        var txtemail = $("#email").val();
+                        var valemail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
-                        if(valmail.test(txtmail)){ $("#smail").text("Correcto"); }
-                        else{ $("#smail").text("Incorrecto"); }
+                        if(valemail.test(txtemail)){ $("#semail").text("Correcto"); }
+                        else{ $("#semail").text("Incorrecto"); }
                     });
 			// ------------------------------------------------------------------
 			$("#nombre").keyup(function(){
@@ -234,13 +255,13 @@
                     });
 
 			//----------------------------------------------------------------------------------------
-			const $input = document.querySelector("#telefono");
+			const $input = document.querySelector("#tel");
                             const patron = /[0-9]+/;
 
                             $input.addEventListener("keydown", event => {
                             console.log(event.key);
                             if(patron.test(event.key)){
-                                $('#telefono').css({ "border":"1px solid #0C0" });
+                                $('#tel').css({ "border":"1px solid #0C0" });
                             }  
                             else{
                                 if(event.keyCode==8){ console.log("backspace"); }
