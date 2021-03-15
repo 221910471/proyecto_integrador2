@@ -45,23 +45,23 @@
 					
 
 					<div style="padding: 1%;">
-						Precio : <input type="text" name="precio" id="precio"><br>
+						Precio : <input type="text" name="precio" id="precio">
 					</div>
 					@if($errors->first('precio')) <i>{{$errors -> first ('precio')}}</i>@endif
 
 					<div style="padding: 1%;">
 					<!-- como cambiar el tamaño -->
-						Descripcion : <input type="text" name="descripcion" id="descripcion" value="{{ old('descripcion')}}"><br>
+						Descripcion : <input type="text" name="descripcion" id="descripcion" value="{{ old('descripcion')}}">
 					</div>
 					@if($errors->first('descripcion')) <i>{{$errors -> first ('descripcion')}}</i>@endif
 
 					<div style="padding: 1%;">
-						Medida : <input type="text" name="medida" id="medida"><br>
+						Medida : <input type="text" name="medida" id="medida">
 					</div>
 					@if($errors->first('medida')) <i>{{$errors -> first ('medida')}}</i>@endif
 
 					<div style="padding: 1%;">
-						Precio oferta : <input type="text" name="precio_oferta" id="precio_oferta"><br>
+						Precio oferta : <input type="text" name="precio_oferta" id="precio_oferta">
 					</div>
 					@if($errors->first('precio_oferta')) <i>{{$errors -> first ('precio_oferta')}}</i>@endif
 					
