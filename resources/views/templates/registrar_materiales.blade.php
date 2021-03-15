@@ -56,7 +56,9 @@
 	</div>
 
 	@include ('layouts.footer')
-	<script>
+
+	
+	<script type="text/javascript">
 
 	$("#nombre").keyup(function(){
 							var txtapm = $("#nombre").val();
@@ -68,13 +70,19 @@
                             else{ $("#nombre").css({"border": "1px solid #F00"}).fadeIn(2000); }
                         });
 //----------------------Editar tipo material----------------------------------------
-	$("#tipo_material").keyup(function(){
-		var txtapm = $("#tipo_material").val();
-        var formato = /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
-		
-        if(formato.test(txtapm)){ $("#tipo_material").css({"border": "1px solid #0F0"}).fadeIn(2000); }
-        else{ $("#tipo_material").css({"border": "1px solid #F00"}).fadeIn(2000); }
-    });
+const $input = document.querySelector("#tipo_material");
+                            const patron = /[A-Za-z]+/;
+
+                            $input.addEventListener("keydown", event => {
+                            console.log(event.key);
+                            if(patron.test(event.key)){
+                                $('#tipo_material').css({ "border": "1px solid #0F0" });
+                            }  
+                            else{
+                                if(event.keyCode==8){ console.log("backspace"); }
+                                else{ event.preventDefault(); }
+                            }  
+                            });
 	</script>
 
 </body>
