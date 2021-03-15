@@ -33,12 +33,13 @@
 					{{ csrf_field() }}
 
 					<div style="padding: 1%;">
-						Nombre del material : <input type="text" name="nombre" value="{{ old('nombre')}}">
+						Nombre del material : <input type="text"  id="nombre" name="nombre" value="{{ old('nombre')}}">
+                        
 					</div>
 					@if($errors->first('nombre')) <i>{{$errors -> first ('nombre')}}</i>@endif
 
 					<div style="padding: 1%;">
-						Tipo de material : <input type="text" name="tipo_material" value="{{ old('tipo_material')}}">
+						Tipo de material : <input type="text"  id="tipo_material" name="tipo_material" value="{{ old('tipo_material')}}">
 					</div>
 					@if($errors->first('tipo_material')) <i>{{$errors -> first ('tipo_material')}}</i>@endif
 					
@@ -55,6 +56,26 @@
 	</div>
 
 	@include ('layouts.footer')
+	<script>
+
+	$("#nombre").keyup(function(){
+							var txtapm = $("#nombre").val();
+                            var formato = /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+							
+				
+
+                            if(formato.test(txtapm)){ $("#nombre").css({"border": "1px solid #0F0"}).fadeIn(2000); }
+                            else{ $("#nombre").css({"border": "1px solid #F00"}).fadeIn(2000); }
+                        });
+//--------------------------------------------------------------
+	$("#tipo_material").keyup(function(){
+		var txtapm = $("#tipo_material").val();
+        var formato = /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+		
+        if(formato.test(txtapm)){ $("#tipo_material").css({"border": "1px solid #0F0"}).fadeIn(2000); }
+        else{ $("#tipo_material").css({"border": "1px solid #F00"}).fadeIn(2000); }
+    });
+	</script>
 
 </body>
 
