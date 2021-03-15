@@ -20,6 +20,22 @@
 	}
 </style>
 
+		<script src=" {{ asset('js/jquery-3.3.1.js') }} "></script>
+    	<script src=" {{ asset('js/jquery-ui.js') }} "></script>
+		
+<script type="text/javascript">
+		$(document).ready(function(){
+
+		$("#email").blur(function(){
+			var txtemail = $("#email").val();
+			var valemail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
+			if(valemail.test(txtemail)){ $("#email").css({"border": "1px solid #0F0"}).fadeIn(2000); }
+			else{ $("#email").css({"border": "1px solid #F00"}).fadeIn(2000); }
+		});
+	});
+</script>
+
 <body class="is-preload">
 
 	<!-- Wrapper -->
@@ -40,13 +56,13 @@
 					{{ csrf_field() }}
 
 					<div>
-						Email : <input type="text" name="email"><br>
+						Email : <input type="text" name="email" id="email"><br>
 					</div>
 					
 					@if($errors->first('email')) <i>{{$errors -> first ('email')}}</i>@endif
 
 					<div>
-						Password : <input type="text" name="pass"><br>
+						Password : <input type="password" name="pass"><br>
 					</div>
 					
 
