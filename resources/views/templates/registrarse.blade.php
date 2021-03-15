@@ -153,12 +153,11 @@
 					<div>
 						<td>E-mail: </td>
                         <td><input type="text" id="email" class="email" name="email"></td>
-                        <td><span id="semail" class="semail"></span></td>
 					</div>
 					@if($errors->first('email')) <i>{{$errors -> first ('email')}}</i>@endif
 
 					<div>
-						Contraseña: <input type="text" id="pass" name="pass" onkeyup="evaluar(this);">
+						Contraseña: <input type="password" id="pass" name="pass" onkeyup="evaluar(this);">
                     	<b id="nivel"></b>
                     	<b id="error"></b>
 					</div>
@@ -203,8 +202,8 @@
                         var txtemail = $("#email").val();
                         var valemail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
-                        if(valemail.test(txtemail)){ $("#semail").text("Correcto"); }
-                        else{ $("#semail").text("Incorrecto"); }
+                        if(valemail.test(txtemail)){ $("#email").css({"border": "1px solid #0F0"}).fadeIn(2000); }
+                        else{ $("#email").css({"border": "1px solid #F00"}).fadeIn(2000); }
                     });
 			// ------------------------------------------------------------------
 			$("#nombre").keyup(function(){
@@ -247,7 +246,7 @@
                             var fecha2 = fecha.split("-");
 
                             var edad = year - fecha2[0];
-                            if(edad > 17){ $("#sfecha").text("Es mayor de edad !! con: "+edad);}
+                            if(edad > 17){ $("#sfecha").text("Es mayor de edad");}
                             else{ $("#sfecha").text("Es menor de edad"); }
                         }
                         else{ $("#sfecha").text("Indique una fecha"); }
@@ -261,7 +260,7 @@
                             $input.addEventListener("keydown", event => {
                             console.log(event.key);
                             if(patron.test(event.key)){
-                                $('#tel').css({ "border":"1px solid #0C0" });
+                                $('#tel').css({ "border": "1px solid #0F0" });
                             }  
                             else{
                                 if(event.keyCode==8){ console.log("backspace"); }
