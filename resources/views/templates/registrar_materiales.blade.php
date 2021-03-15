@@ -67,7 +67,7 @@
                             if(formato.test(txtapm)){ $("#nombre").css({"border": "1px solid #0F0"}).fadeIn(2000); }
                             else{ $("#nombre").css({"border": "1px solid #F00"}).fadeIn(2000); }
                         });
-//--------------------------------------------------------------
+//----------------------Editar tipo material----------------------------------------
 	$("#tipo_material").keyup(function(){
 		var txtapm = $("#tipo_material").val();
         var formato = /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
