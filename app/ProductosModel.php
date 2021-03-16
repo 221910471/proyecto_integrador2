@@ -10,7 +10,9 @@ class ProductosModel extends Model
     protected $primaryKey = 'id_producto';
     protected $fillable = [
        'img',
+       //'img2',
        'nombre_producto',
+       //'tipo_joya_id',
        'no_existencias',
        'precio',
        'descripcion',

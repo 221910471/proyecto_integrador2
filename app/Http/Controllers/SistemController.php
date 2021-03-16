@@ -115,11 +115,13 @@ class SistemController extends Controller
     
          $usu = ProductosModel::create(array(
             'img' => $img,
+            //'img2' => $img2,
             'nombre_producto'=>$request->input('nombre_producto'),
             'no_existencias' =>$request->input('no_existencias'),
             'precio' =>        $request->input('precio'),
             'descripcion' =>   $request->input('descripcion'),
             'medida' =>        $request->input('medida'),
+            //'tipo_joya_id' =>  $request->input('tipo_joya_id'),
             'precio_oferta' => $request->input('precio_oferta')
             
          ));
@@ -234,3 +236,4 @@ public function paypal()
         return  view("templates.paypal");
     }
 }
+

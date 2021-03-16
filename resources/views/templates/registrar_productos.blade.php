@@ -55,6 +55,18 @@
 					</div>
 					@if($errors->first('descripcion')) <i>{{$errors -> first ('descripcion')}}</i>@endif
 
+					<!-- <div style="padding: 1%;">
+						Tipo de joyeria : 
+
+						<select name="tipo_joya_id" id="tipo_joya_id" value="{{ old('tipo_joya_id')}}">
+							<option value="1">Anillo</option>
+							<option value="2">Collar</option>
+							<option value="3">Reloj</option>
+						</select>
+						
+						<input type="text" name="tipo_joya_id" id="tipo_joya_id" value="{{ old('tipo_joya_id')}}">
+					</div> -->
+
 					<div style="padding: 1%;">
 						Medida : <input type="text" name="medida" id="medida">
 					</div>
@@ -64,8 +76,10 @@
 						Precio oferta : <input type="text" name="precio_oferta" id="precio_oferta">
 					</div>
 					@if($errors->first('precio_oferta')) <i>{{$errors -> first ('precio_oferta')}}</i>@endif
-					
-					Imagen : <input type="file" name="img"><br>
+					<br>
+					Imagen principal : <input type="file" name="img"><br><br><br>
+
+					<!-- Imagen secundaria : <input type="file" name="img2"><br> -->
 
 					<hr>
 					<!--*Genero : <input type="text" name="gen"><br>

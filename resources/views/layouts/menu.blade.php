@@ -38,14 +38,14 @@
 											<span class="opener">Sesion/Cliente</span>
 											<ul>
 												<li><a href="{{ route('registrarse')}}">Registrarse</a></li>
-												<li><a href="{{ route('detalleUsuario')}}">Ver perfil</a></li>
+												
 												<li><a href="{{ route('iniciar_sesion')}}">Iniciar sesion</a></li>
 												
 
 											</ul>
 										</li>
-										@if(session('session_tipo') == 1)
-										
+										@if(session('session_tipo') == 1 || session('session_tipo') == 3)
+										<li><a href="{{ route('detalleUsuario')}}">Ver perfil</a></li>
 										<li>
 											<span class="opener">Productos</span>
 											<ul>
