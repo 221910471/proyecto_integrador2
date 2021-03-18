@@ -18,23 +18,18 @@
 	.card {
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 		transition: 0.3s;
-
 		border-radius: 5px;
 		text-align: center;
 	}
-
 	.card:hover {
 		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 	}
-
 	img {
 		border-radius: 5px 5px 0 0;
 	}
-
 	.container {
 		padding: 2px 16px;
 	}
-
 	.pag {
 		text-align: center;
 	}
@@ -59,14 +54,13 @@
 				<form action="{{ route('buscar')}}" method="GET" name="buscar">
 					{{ csrf_field() }}
 					<div class="container">
-						Buscar: <input type="text" name="buscar" value="{{ old('buscar')}}" placeholder="Buscar por nombre: Collar">
+						Buscar: <input type="text" name="buscar" value="{{ old('buscar')}}" placeholder="Buscar por nombre: Juan">
 					</div>
 
 					<div class="container">
 
 						<!-- Precio Minimo:
 						<input type="int" name="precioMin" value="{{ old('buscar')}}"><br>
-
 						Precio Maximo:
 						<input type="int" name="precioMax" value="{{ old('buscar')}}"> -->
 					</div>
@@ -77,34 +71,33 @@
 
 				</form>
 
-				<div class="container">
-					
-				</div>
-
 				<div>
 					<div class="container">
-						
-						<div class="card" style="width: 18rem;">
-								<div class="text-align">
+						<div class="row">
+							<div class="col-sm-3 bg-light">
+								
+
+							</div>
+							<div class="card">
+								<div class="row  justify-content-center">
 									
 									@forelse($usus as $usu)
-									<div class="text-center">
+									<div class="col-4 border p-5 mt-5 text-center">
 										<img src="{{ asset('img/'.$usu->img) }} " alt="Imagen" width="200" height="200"><br>
-											
-											{{ $usu->nombre_producto}}<br>
+
+
+											<h3>{{ $usu->nombre_producto}}</h3><br>
 											Disponibles: {{ $usu->no_existencias}}<br>
 											{{ $usu->descripcion}}<br>
-											Precio: $ {{ $usu->precio}}<br>
+											Precio: <del>$ {{ $usu->precio}}</del><br>
 											Precio de oferta <P>$ {{ $usu->precio_oferta}}</P>
-											
-										
+
 										<a href="{{ route('detalleProducto', ['id' => $usu->id_producto]) }}" class="button big" role="button" aria-pressed="true">DETALLE</a><br></br>
 
 										<form action="{{route('cart.add')}}" method="post">
 											@csrf
 											<input type="hidden" name="producto_id" value="{{$usu->id_producto}}">
-											<input type="submit" name="btn" class="btn btn-success" value="AGREGAR AL CARRITO"><br>
-											<br>
+											<input type="submit" name="btn" class="btn btn-success" value="AGREGAR AL CARRITO">
 										</form>
 
 									</div>
@@ -112,7 +105,7 @@
 
 									@endforelse
 								</div>
-							
+							</div>
 						</div>
 					</div>
 
