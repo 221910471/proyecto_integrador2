@@ -19,7 +19,7 @@
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 		transition: 0.3s;
 
-		border-radius: 5px;
+		border-radius: 15px;
 		text-align: center;
 	}
 
@@ -47,7 +47,7 @@
 
 				@include ('layouts.header')
 
-
+				
 				<h2>Detalle Producto</h2>
 
 				<div>
@@ -57,29 +57,29 @@
 						<div class="col-sm-6">
 							<div class="card">
 							<div class="card-body">
-								<img src="{{ asset('img/'.$usu->img) }}" alt="Imagen" width="600" height="600">
+								<img src="{{ asset('img/'.$usu->img) }}" alt="Imagen" width="200" height="200">
 							</div>
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="card">
-								<div class="card-body">
+								<div class="card-body ">
 									<div class="container">
 										Nombre del producto: <br> 
-										<h2>{{ $usu->nombre_producto}}</h2> <br>
+										<h2>{{ $usu->nombre_producto}}</h2> 
 										Numero de existencias actuales: {{ $usu->no_existencias}} <br>
 										Precio: <del> $ {{ $usu->precio }} </del><br>
 										Descripcion: {{ $usu->descripcion}} <br>
 										Medida: {{ $usu->medida }} <br>
 										Precio de oferta: <br> 
 										<h4>$ {{ $usu->precio_oferta}} </h4><br>
-										<br></br>
+										
 										<form action="{{route('cart.add')}}" method="post">
 											@csrf
 											<input type="hidden" name="producto_id" value="{{$usu->id_producto}}">
 											<input type="submit" name="btn" class="btn btn-success" value="AÑADIR AL CARRITO">
 										</form>
-										<a href="{{ route('catalogo')}}" class="button big">Regresar</a><br>
+										<a href="{{ route('catalogo')}}" class="button big">Regresar</a><br><br>
 
 									</div>
 								</div>

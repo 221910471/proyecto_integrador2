@@ -43,8 +43,8 @@
 							<li><a href="{{route('catalogo')}}" class="button big">Compra ahora</a></li>
 						</ul>
 					</div>
-					<span class="image object">
-						<img src="{{asset('images/bg.jpg')}}" alt="" />
+					<span class="image">
+						<img src="{{asset('images/1.jpg')}}" alt="" />
 					</span>
 				</section>
 

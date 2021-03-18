@@ -39,29 +39,29 @@
 					@if($errors->first('nombre_producto')) <i>{{$errors -> first ('nombre_producto')}}</i>@endif
 
 					<div style="padding: 1%;">
-						Numero de existencias : <input type="number" name="no_existencias" value="{{ $usu->no_existencias}}">
+						Numero de existencias : <input type="text" name="no_existencias" value="{{ $usu->no_existencias}}">
 					</div>
 					@if($errors->first('no_existencias')) <i>{{$errors -> first ('no_existencias')}}</i>@endif
 					
 
 					<div style="padding: 1%;">
-						Precio : <input type="number" name="precio" value="{{ $usu->precio}}"><br>
+						Precio : <input type="text" name="precio" value="{{ $usu->precio}}">
 					</div>
 					@if($errors->first('precio')) <i>{{$errors -> first ('precio')}}</i>@endif
 
 					<div style="padding: 1%;">
 					<!-- como cambiar el tamaño -->
-						Descripcion : <input type="textarea" name="descripcion" value="{{ $usu->descripcion }}"><br>
+						Descripcion : <input type="text" name="descripcion" value="{{ $usu->descripcion }}">
 					</div>
 					@if($errors->first('descripcion')) <i>{{$errors -> first ('descripcion')}}</i>@endif
 
 					<div style="padding: 1%;">
-						Medida : <input type="number" name="medida" value="{{ $usu->medida }}"><br>
+						Medida : <input type="text" name="medida" value="{{ $usu->medida }}">
 					</div>
 					@if($errors->first('medida')) <i>{{$errors -> first ('medida')}}</i>@endif
 
 					<div style="padding: 1%;">
-						Precio oferta : <input type="number" name="precio_oferta" value="{{ $usu->precio_oferta }}"><br>
+						Precio oferta : <input type="text" name="precio_oferta" value="{{ $usu->precio_oferta }}">
 					</div>
 					@if($errors->first('precio_oferta')) <i>{{$errors -> first ('precio_oferta')}}</i>@endif
 					

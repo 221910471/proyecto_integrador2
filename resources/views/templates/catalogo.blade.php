@@ -83,31 +83,28 @@
 
 				<div>
 					<div class="container">
-						<div class="row">
-							<div class="col-sm-3 bg-light">
-								
-
-							</div>
-							<div class="card">
-								<div class="row justify-content-center">
+						
+						<div class="card" style="width: 18rem;">
+								<div class="text-align">
 									
 									@forelse($usus as $usu)
-									<div class="col-4 border p-5 mt-5 text-center">
+									<div class="text-center">
 										<img src="{{ asset('img/'.$usu->img) }} " alt="Imagen" width="200" height="200"><br>
-										
-										
+											
 											{{ $usu->nombre_producto}}<br>
 											Disponibles: {{ $usu->no_existencias}}<br>
 											{{ $usu->descripcion}}<br>
-											Precio: <del>$ {{ $usu->precio}}</del><br>
+											Precio: $ {{ $usu->precio}}<br>
 											Precio de oferta <P>$ {{ $usu->precio_oferta}}</P>
+											
 										
 										<a href="{{ route('detalleProducto', ['id' => $usu->id_producto]) }}" class="button big" role="button" aria-pressed="true">DETALLE</a><br></br>
 
 										<form action="{{route('cart.add')}}" method="post">
 											@csrf
 											<input type="hidden" name="producto_id" value="{{$usu->id_producto}}">
-											<input type="submit" name="btn" class="btn btn-success" value="AGREGAR AL CARRITO">
+											<input type="submit" name="btn" class="btn btn-success" value="AGREGAR AL CARRITO"><br>
+											<br>
 										</form>
 
 									</div>
@@ -115,7 +112,7 @@
 
 									@endforelse
 								</div>
-							</div>
+							
 						</div>
 					</div>
 

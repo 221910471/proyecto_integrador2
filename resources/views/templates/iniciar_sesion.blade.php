@@ -73,7 +73,9 @@
 				@else
                 <div class="alinear">
 				<h1>Hola {{session('session_name')}}</h1>
-				<h1>Ya estas Logeado, Ve a comprar algunas joyas.</h1>
+				<h1>Ve a comprar algunas joyas.</h1>
+				<img src="{{asset('images/2.jpg')}}"  />
+
 				</div>
 
 				@endif

@@ -14,6 +14,9 @@
 
 		</script>
 	</head>
+	<style>
+	
+	</style>
 
 <!-- Sidebar -->
 <div id="sidebar">
@@ -27,7 +30,7 @@
 								</section>
 
 							<!-- Menu -->
-								<nav id="menu">
+								<nav id="menu" >
 									<header class="major">
 										<h2>Menu</h2>
 									</header>
