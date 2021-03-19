@@ -54,7 +54,7 @@
 				<form action="{{ route('buscar')}}" method="GET" name="buscar">
 					{{ csrf_field() }}
 					<div class="container">
-						Buscar: <input type="text" name="buscar" value="{{ old('buscar')}}" placeholder="Buscar por nombre: Juan">
+						Buscar: <input type="text" name="buscar" value="{{ old('buscar')}}" placeholder="Buscar por nombre: Anillo">
 					</div>
 
 					<div class="container">

@@ -1,6 +1,6 @@
 <!-- Header -->
 <header id="header">
-	<a href="{{ route('home')}}" class="logo"><strong>Joyeria</strong> Luminoseté</a>
+	<a href="{{ route('home')}}" class="logo"><strong>Joyeria</strong> Luminosité</a>
 	@if(empty(session('session_id')))
 	<h1></h1>
 	@else

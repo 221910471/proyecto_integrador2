@@ -72,12 +72,15 @@
 
 				@else
                 <div class="alinear">
-				<h1>Hola {{session('session_name')}}</h1>
-				<h1>Ve a comprar algunas joyas.</h1>
-				<img src="{{asset('images/2.jpg')}}"  />
-
+					<h1>Bienvenido {{session('session_name')}}</h1>
+					<h2>Revisa nuestros productos</h2><br>
+					<h2>Joyeria Luminosite</h2><br>
+					<h3><em>"Acompañandote en tus momentos importantes"</em></h3>
+					<h2><em><- Dirigete a ver nuestros productos -></em></h2><br>
+					<h3> Da click en la imagen</h3>
+					<a href="{{ route('catalogo')}}"><img class="d-block w-100" src="img/joyeria.jpg" width="850" height="500"></a>
 				</div>
-
+						
 				@endif
 
 			</div>

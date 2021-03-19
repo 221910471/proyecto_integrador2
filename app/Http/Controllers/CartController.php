@@ -21,7 +21,7 @@ class CartController extends Controller
         Cart::add(
             $producto->id_producto, 
             $producto->nombre_producto, 
-            $producto->precio, 
+            $producto->precio_oferta, 
             1,   
         );
 
