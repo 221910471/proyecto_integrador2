@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Inicio</title>
+	<title>Nueva Dirección</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="{{asset('assets/css/main.css')}}" />
@@ -25,30 +25,31 @@
 
 			@include ('layouts.header')
 
-			<h2>Registrar la direccion</h2>
+			<h2>Registre su Direccion</h2>
 
 
-				<form action="{{ route ('guardarVentas')}}" method="POST" name="nuevo">
+				<form action="{{ route ('guardarDirecciones')}}" method="POST" name="nuevo">
 
 					{{ csrf_field() }}
 
 					<div style="padding: 1%;">
-						Monto total : <input type="number" name="monto_total" value="{{ old('monto_total')}}">
+						Monto total : <input type="text" name="calle" value="{{ old('calle')}}">
 					</div>
-					@if($errors->first('monto_total')) <i>{{$errors -> first ('monto_total')}}</i>@endif
-
 					<div style="padding: 1%;">
-						Id de la direccion vinculada : <input type="number" name="direcciones_id" value="{{ old('direcciones_id')}}">
+						Monto total : <input type="number" name="numero_direccion" value="{{ old('numero_direccion')}}">
 					</div>
-					@if($errors->first('direcciones_id')) <i>{{$errors -> first ('direcciones_id')}}</i>@endif
+					<div style="padding: 1%;">
+						Monto total : <input type="text" name="localidad" value="{{ old('localidad')}}">
+					</div>
+					<div style="padding: 1%;">
+						Monto total : <input type="text" name="municipio" value="{{ old('municipio')}}">
+					</div>
+					<div style="padding: 1%;">
+						Monto total : <input type="text" name="estado" value="{{ old('estado')}}">
+					</div>
 					
-
-					<div style="padding: 1%;">
-						Cliente que realizo la compra : <input type="number" name="clientes_id" value="{{ old('clientes_id')}}"><br>
-					</div>
-					@if($errors->first('clientes_id')) <i>{{$errors -> first ('clientes_id')}}</i>@endif
 					<hr>
-
+					
 					<input type="submit" value="Enviar">
 				</form>
 

@@ -115,11 +115,11 @@ Route::name('reporte')->get('reporte/', 'SistemController@reporte');
 
 //------------------------------------------Direcciones--------------------------------------------------------------
 
-// Route::name('direcciones')->get('productos/{buscar?}', 'CRUDController@direcciones');
+Route::name('direcciones')->get('productos/', 'CRUDController@direcciones');
 
 // Route::name('guardarDirecciones')->post('guardarDirecciones/', 'CRUDController@guardarDirecciones');
 
-// Route::name('registrarDirecciones')->get('registrarDirecciones/', 'CRUDController@registrarDirecciones');
+Route::name('registrarDirecciones')->get('registrarDirecciones/', 'CRUDController@registrarDirecciones');
 
 // Route::name('modificarDirecciones')->get('modificarDirecciones/{id}', 'CRUDController@modificarDirecciones');
 
@@ -145,3 +145,9 @@ Route::name('mapa')->get('mapa/', 'SistemController@mapa');
 //paypal
 
 Route::name('paypal')->get('paypal/', 'SistemController@paypal');
+
+//------------------------------------  Correos con gmail -------------------------
+
+Route::name('correo')->get('correo/', 'CorreoController@correo');
+Route::name('enviar1')->get('enviar1/', 'CorreoController@enviar1');
+

@@ -95,31 +95,27 @@ class CRUDController extends Controller
         //--------------------------- direcciones -----------------------------------------------
     
 
-        public function Direcciones()
-        {
+        public function Direcciones() {
             $usus = DireccionesModel::all();
-            $comps = UsuariosModel::all();
             return  view("templates.direcciones")
-            ->with(['usus' => $usus])
-            ->with(['comps' => $comps]);
-
+            ->with(['usus' => $usus]);
         }
 
         public function registrarDirecciones() {
-            return  view("templates.registrar_direccion");
+            return  view("templates.registrar_direcciones");
         }
         
-        public function guardarDirecciones(ValidarMaterialesRequest $request){
+        /*public function guardarDirecciones(ValidarDireccionesRequest $request){
     
-            $usus = MaterialesModel::create($request->only('nombre', 'tipo_material'));
-            return redirect()->route('registrarMateriales');
+            $usus = DireccionesModel::create($request->only('nombre', 'tipo_material'));
+            return redirect()->route('registrarDirecciones');
         }
         
-        public function modificarDirecciones(MaterialesModel $id){
-            return view("templates.editarMateriales")
+        public function modificarDirecciones(DireccionesModel $id){
+            return view("templates.editarDirecciones")
                 ->with(['usu' => $id]);
         }
-        public function salvarDirecciones(MaterialesModel $id, Request $request){
+        public function salvarDirecciones(DireccionesModel $id, Request $request){
 
                 //  $id = AlumnosModel::find($id);
                  $id->update($request->only('nombre', 'tipo_material'));
@@ -130,6 +126,6 @@ class CRUDController extends Controller
         public function borrarDireccion(MaterialesModel $id){
             $id->delete();
             return redirect()->route('materiales');
-        }
+        }*/
 }
 
