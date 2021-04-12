@@ -1,6 +1,3 @@
-@extends('layouts.layouts')
-
-@section('contenido')
 
 <H1>Correo | Email</H1>
 <hr>
@@ -17,5 +14,3 @@
     Mensaje: <textarea name="mensaje"></textarea><br>
     <input type="submit" value="Enviar-02"><br>
 </form>
-
-@endsection
