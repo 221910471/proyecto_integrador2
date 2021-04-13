@@ -9,7 +9,7 @@ class DireccionesModel extends Model
     protected $table = 'tb_direcciones';
     protected $primaryKey = 'id_direccion';
     protected $fillable = [
-       'clientes_id',
+       'cliente_id',
        'calle',
        'numero_direccion',
        'localidad',

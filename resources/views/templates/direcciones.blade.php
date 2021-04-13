@@ -34,7 +34,7 @@
 							<tr>
 
 								<th>
-									<h3>Cliente Relacionado</h3>
+									<h3>Direccion del cliente</h3>
 								</th>
 								<th>
 									<h3>Calle</h3>
@@ -64,8 +64,8 @@
 							<tr>
 								
 							@foreach($comps as $comp)
-							@if($usu->clientes_id  == $comp->id_usuario)
-								<td>{{ $comp->nombre}} {{ $comp->app}} {{ $comp->apm}}</td>
+							@if($usu->cliente_id  == $comp->id_usuario)
+								<td>{{ $comp->nombre}} {{ $comp->app}}</td>
 							@endif
 							@endforeach
 							

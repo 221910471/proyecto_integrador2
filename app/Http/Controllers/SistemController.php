@@ -80,7 +80,7 @@ class SistemController extends Controller
          ));
     
         // return redirect()->route('registrarDirecciones');
-        return redirect()->route('iniciar_sesion');
+        return redirect()->route('registrarDirecciones2');
         
 
     }

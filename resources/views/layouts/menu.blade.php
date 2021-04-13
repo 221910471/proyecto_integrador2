@@ -68,8 +68,8 @@
 										<li>
 											<span class="opener">Direcciones</span>
 											<ul>
-												<li><a href="{{ route('registrarDirecciones')}}">Registrar Nueva Dirección</a></li>
-												<li><a href="{{ route('direcciones')}}">Ver Registro de direcciones</a></li>
+												<li><a href="{{ route('registrarDirecciones2')}}">Registrar Nueva Dirección</a></li>
+												<li><a href="{{ route('Direcciones2')}}">Ver Registro de direcciones</a></li>
 												
 											</ul>
 										</li>

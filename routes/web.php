@@ -115,13 +115,13 @@ Route::name('reporte')->get('reporte/', 'SistemController@reporte');
 
 //------------------------------------------Direcciones--------------------------------------------------------------
 
-Route::name('direcciones')->get('productos/', 'CRUDController@direcciones');
+Route::name('Direcciones2')->get('Direcciones2/', 'CRUDController@Direcciones2');
 
-// Route::name('guardarDirecciones')->post('guardarDirecciones/', 'CRUDController@guardarDirecciones');
+Route::name('guardarDirecciones2')->post('guardarDirecciones2/', 'CRUDController@guardarDirecciones2');
 
-Route::name('registrarDirecciones')->get('registrarDirecciones/', 'CRUDController@registrarDirecciones');
+Route::name('registrarDirecciones2')->get('registrarDirecciones2/', 'CRUDController@registrarDirecciones2');
 
-// Route::name('modificarDirecciones')->get('modificarDirecciones/{id}', 'CRUDController@modificarDirecciones');
+Route::name('modificarDirecciones2')->get('modificarDirecciones2/{id}', 'CRUDController@modificarDirecciones2');
 
 // Route::name('salvarDirecciones')->put('salvarDirecciones/{id}', 'CRUDController@salvarDirecciones');
 

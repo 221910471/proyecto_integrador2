@@ -28,24 +28,26 @@
 			<h2>Registre su Direccion</h2>
 
 
-				<form action="{{ route ('guardarDirecciones')}}" method="POST" name="nuevo">
+				<form action="{{ route ('guardarDirecciones2')}}" method="POST" name="nuevo">
 
 					{{ csrf_field() }}
-
 					<div style="padding: 1%;">
-						Monto total : <input type="text" name="calle" value="{{ old('calle')}}">
+						Cliente_id : <input type="text" name="cliente_id" value="{{ old('cliente_id')}}">
 					</div>
 					<div style="padding: 1%;">
-						Monto total : <input type="number" name="numero_direccion" value="{{ old('numero_direccion')}}">
+						Calle : <input type="text" name="calle" value="{{ old('calle')}}">
 					</div>
 					<div style="padding: 1%;">
-						Monto total : <input type="text" name="localidad" value="{{ old('localidad')}}">
+						Numero : <input type="number" name="numero_direccion" value="{{ old('numero_direccion')}}">
 					</div>
 					<div style="padding: 1%;">
-						Monto total : <input type="text" name="municipio" value="{{ old('municipio')}}">
+						Localidad : <input type="text" name="localidad" value="{{ old('localidad')}}">
 					</div>
 					<div style="padding: 1%;">
-						Monto total : <input type="text" name="estado" value="{{ old('estado')}}">
+						Municipio : <input type="text" name="municipio" value="{{ old('municipio')}}">
+					</div>
+					<div style="padding: 1%;">
+						Estado : <input type="text" name="estado" value="{{ old('estado')}}">
 					</div>
 					
 					<hr>

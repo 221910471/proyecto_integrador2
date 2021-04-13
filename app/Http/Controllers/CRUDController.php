@@ -95,26 +95,34 @@ class CRUDController extends Controller
         //--------------------------- direcciones -----------------------------------------------
     
 
-        public function Direcciones() {
+        public function Direcciones2() {
             $usus = DireccionesModel::all();
+            $comps = UsuariosModel::all();
             return  view("templates.direcciones")
-            ->with(['usus' => $usus]);
+            ->with(['usus' => $usus])
+            ->with(['comps' => $comps]);
         }
 
-        public function registrarDirecciones() {
+        public function registrarDirecciones2() {
             return  view("templates.registrar_direcciones");
         }
         
-        /*public function guardarDirecciones(ValidarDireccionesRequest $request){
+        public function guardarDirecciones2(Request $request){
     
-            $usus = DireccionesModel::create($request->only('nombre', 'tipo_material'));
-            return redirect()->route('registrarDirecciones');
+            $usus = DireccionesModel::create($request->only('cliente_id',
+            'calle',
+            'numero_direccion',
+            'localidad',
+            'municipio',
+            'estado'));
+            return redirect()->route('iniciar_sesion');
         }
         
-        public function modificarDirecciones(DireccionesModel $id){
+        public function modificarDirecciones2(DireccionesModel $id){
             return view("templates.editarDirecciones")
                 ->with(['usu' => $id]);
         }
+        /*
         public function salvarDirecciones(DireccionesModel $id, Request $request){
 
                 //  $id = AlumnosModel::find($id);

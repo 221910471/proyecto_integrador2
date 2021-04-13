@@ -64,6 +64,7 @@
 							Email: {{ $usu->email }} <br>
 							<br></br>
 							<a href="{{ route('home')}}" class="button big">Regresar al Inicio</a><br>
+							<h3><a href="{{ route('modificarDirecciones', ['id' => $usu->id_usuario]) }}"><i class="fas fa-pen-square"></i>Cambiar mi dirección</a></h3>
 
 						</div>
 					</div>
