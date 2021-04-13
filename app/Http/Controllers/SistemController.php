@@ -79,8 +79,8 @@ class SistemController extends Controller
             
          ));
     
-        // return redirect()->route('registrarDirecciones');
-        return redirect()->route('registrarDirecciones2');
+        //return redirect()->route('registrarDirecciones2');
+        return redirect()->route('iniciar_sesion');
         
 
     }
