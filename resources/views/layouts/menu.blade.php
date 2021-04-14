@@ -117,10 +117,11 @@
 									</header>
 									<p>Si tienes alguna duda, contactanos nosotros la resolveremos</p>
 									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
+										<li class="icon solid fa-envelope"><a href="{{ route('sendemail')}}">joyerialuminositecorreos@gmail.com</a></li>
+										<li class="icon solid fa-phone">55 (722) 908-7418</li>
+										<!-- <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li> -->
+										
 									</ul>
 								</section>
 

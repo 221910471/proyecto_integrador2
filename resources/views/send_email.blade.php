@@ -19,11 +19,12 @@
   </style>
  </head>
  <body>
+
   <br />
   <br />
   <br />
   <div class="container box">
-   <h3 align="center">How Send an Email in Laravel</h3><br />
+   <h3 align="center">!!! Por favor introduzca sus datos y el comentario para hacernoslo llegar !!!</h3><br />
    @if (count($errors) > 0)
     <div class="alert alert-danger">
      <button type="button" class="close" data-dismiss="alert">×</button>
@@ -43,22 +44,23 @@
    <form method="post" action="{{url('sendemail/send')}}">
     {{ csrf_field() }}
     <div class="form-group">
-     <label>Enter Your Name</label>
+     <label>Ingresa tu nombre</label>
      <input type="text" name="name" class="form-control" value="" />
     </div>
     <div class="form-group">
-     <label>Enter Your Email</label>
+     <label>Ingresa tu correo electronico</label>
      <input type="text" name="email" class="form-control" value="" />
     </div>
     <div class="form-group">
-     <label>Enter Your Message</label>
+     <label>Escribe tu mensaje</label>
      <textarea name="message" class="form-control"></textarea>
     </div>
     <div class="form-group">
      <input type="submit" name="send" class="btn btn-info" value="Send" />
     </div>
    </form>
-   
+   <Button><a href="{{ route('home')}}" class="button big">Regresar al Inicio</a></Button><br>
+
   </div>
  </body>
 </html>

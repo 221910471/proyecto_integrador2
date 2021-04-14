@@ -153,5 +153,5 @@ Route::name('paypal')->get('paypal/', 'SistemController@paypal');
 
 //------------------------------------  Correos con gmail -------------------------
 
-Route::get('/sendemail', 'SendEmailController@index');
+Route::name('sendemail')->get('/sendemail', 'SendEmailController@index');
 Route::post('/sendemail/send', 'SendEmailController@send');
