@@ -6,7 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\CompaniasModel' => $baseDir . '/app/CompaniasModel.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\DireccionesModel' => $baseDir . '/app/DireccionesModel.php',
+    'App\\EnviosModel' => $baseDir . '/app/EnviosModel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -16,7 +19,7 @@ return array(
     'App\\Http\\Controllers\\CRUDController' => $baseDir . '/app/Http/Controllers/CRUDController.php',
     'App\\Http\\Controllers\\CartController' => $baseDir . '/app/Http/Controllers/CartController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
-    'App\\Http\\Controllers\\GmapController' => $baseDir . '/app/Http/Controllers/GmapController.php',
+    'App\\Http\\Controllers\\CorreoController' => $baseDir . '/app/Http/Controllers/CorreoController.php',
     'App\\Http\\Controllers\\LoginController' => $baseDir . '/app/Http/Controllers/LoginController.php',
     'App\\Http\\Controllers\\PaymentController' => $baseDir . '/app/Http/Controllers/PaymentController.php',
     'App\\Http\\Controllers\\SistemController' => $baseDir . '/app/Http/Controllers/SistemController.php',
@@ -121,6 +124,7 @@ return array(
     'Carbon\\Traits\\Units' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Units.php',
     'Carbon\\Traits\\Week' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Week.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Cornford\\Googlmapper\\Contracts\\MappingBaseInterface' => $vendorDir . '/cornford/googlmapper/src/Cornford/Googlmapper/Contracts/MappingBaseInterface.php',
     'Cornford\\Googlmapper\\Contracts\\MappingInterface' => $vendorDir . '/cornford/googlmapper/src/Cornford/Googlmapper/Contracts/MappingInterface.php',
     'Cornford\\Googlmapper\\Contracts\\ModelingInterface' => $vendorDir . '/cornford/googlmapper/src/Cornford/Googlmapper/Contracts/ModelingInterface.php',
@@ -3379,7 +3383,6 @@ return array(
     'Symfony\\Component\\EventDispatcher\\Debug\\TraceableEventDispatcherInterface' => $vendorDir . '/symfony/event-dispatcher/Debug/TraceableEventDispatcherInterface.php',
     'Symfony\\Component\\EventDispatcher\\Debug\\WrappedListener' => $vendorDir . '/symfony/event-dispatcher/Debug/WrappedListener.php',
     'Symfony\\Component\\EventDispatcher\\DependencyInjection\\AddEventAliasesPass' => $vendorDir . '/symfony/event-dispatcher/DependencyInjection/AddEventAliasesPass.php',
-    'Symfony\\Component\\EventDispatcher\\DependencyInjection\\ExtractingEventDispatcher' => $vendorDir . '/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php',
     'Symfony\\Component\\EventDispatcher\\DependencyInjection\\RegisterListenersPass' => $vendorDir . '/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php',
     'Symfony\\Component\\EventDispatcher\\Event' => $vendorDir . '/symfony/event-dispatcher/Event.php',
     'Symfony\\Component\\EventDispatcher\\EventDispatcher' => $vendorDir . '/symfony/event-dispatcher/EventDispatcher.php',
@@ -3759,7 +3762,6 @@ return array(
     'Symfony\\Component\\Routing\\Loader\\ObjectLoader' => $vendorDir . '/symfony/routing/Loader/ObjectLoader.php',
     'Symfony\\Component\\Routing\\Loader\\ObjectRouteLoader' => $vendorDir . '/symfony/routing/Loader/ObjectRouteLoader.php',
     'Symfony\\Component\\Routing\\Loader\\PhpFileLoader' => $vendorDir . '/symfony/routing/Loader/PhpFileLoader.php',
-    'Symfony\\Component\\Routing\\Loader\\ProtectedPhpFileLoader' => $vendorDir . '/symfony/routing/Loader/PhpFileLoader.php',
     'Symfony\\Component\\Routing\\Loader\\XmlFileLoader' => $vendorDir . '/symfony/routing/Loader/XmlFileLoader.php',
     'Symfony\\Component\\Routing\\Loader\\YamlFileLoader' => $vendorDir . '/symfony/routing/Loader/YamlFileLoader.php',
     'Symfony\\Component\\Routing\\Matcher\\CompiledUrlMatcher' => $vendorDir . '/symfony/routing/Matcher/CompiledUrlMatcher.php',

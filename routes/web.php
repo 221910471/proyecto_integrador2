@@ -33,10 +33,15 @@ Route::name('validar')->post('validar/', 'LoginController@validar');
 
 Route::name('logout')->get('logout/', 'LoginController@logout');
 
-//rutas de paypal
-Route::get('/paypal/pay', 'PaymentController@payWithPayPal');
+//Route::name('paywithpaypal')->get('paywithpaypal/', 'PaymentController@paywithpaypal');
 
-Route::get('/paypal/status', 'PaymentController@payPalStatus');
+
+
+// route for processing payment
+Route::post('paypal', 'PaymentController@payWithpaypal');
+
+// route for check status of the payment
+Route::get('status', 'PaymentController@getPaymentStatus');
 
 //-------------------------------------------Usuarios--------------------------------------------------------------
 
