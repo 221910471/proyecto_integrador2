@@ -21,6 +21,7 @@ class LoginController extends Controller
         if (count($consulta) == 0) {
             
             return view('templates.iniciar_sesion');
+            alert('No hay ningun usuario con ese correo y contraseña');
 
         } else {
             // return 'entrar';
@@ -38,10 +39,14 @@ class LoginController extends Controller
                     
                     return view('templates.iniciar_sesion')
                     ->with($tipo = $session_tipo);
+                    break;
+
                     case 2:
                     
-                        return view('templates.home')
+                        return view('templates.iniciar_sesion')
                         ->with($tipo = $session_tipo);
+                        break;
+
                         case 3:
                     
                             return view('templates.catalogo')
