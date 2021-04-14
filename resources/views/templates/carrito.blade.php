@@ -55,9 +55,10 @@
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
+			<form  method="POST" id="payment-form" action="{!! URL::to('paypal') !!}">
 
 				@include ('layouts.header')
-
+				
 				<h2>Carrito de productos</h2>
 				<a href="{{ route('catalogo')}}" class="button big">Catalogo</a><br></br>
 				<div>
@@ -124,48 +125,17 @@
 				<div align="center">
 
 				<h1>Pagar con Paypal</h1>
+				<form class="w3-container w3-display-middle w3-card-4 w3-padding-16" method="POST" id="payment-form"
+        		  	action="{!! URL::to('paypal') !!}">
+    			  	{{ csrf_field() }}
+    			  	<button class="w3-btn w3-blue" id="amount" name="amount" value="{{$total}}">Pay with PayPal</button>
+    			</form>
+				
 
-				<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
-                          <!-- <script>paypal.Buttons().render('body');</script> -->
-        <script
-          src="https://www.paypal.com/sdk/js?client-id=SB_CLIENT_ID"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
-        </script>
-   
-			
-
-			<div id="paypal-button-container"></div>
-
-			<!-- <script>
-				paypal.Buttons().render('#paypal-button-container');
-				// This function displays Smart Payment Buttons on your web page.
-			</script> -->
-
-			
-			<script>
-				paypal.Buttons({
-				createOrder: function(data, actions) {
-					// This function sets up the details of the transaction, including the amount and line item details.
-					return actions.order.create({
-					purchase_units: [{
-						amount: {
-						value: '{{$total}}'            }
-					}]
-					});
-				},
-				onApprove: function(data, actions) {
-					// This function captures the funds from the transaction.
-					return actions.order.capture().then(function(details) {
-					// This function shows a transaction success message to your buyer.
-					alert('Transaction completed by ' + details.payer.name.given_name);
-					});
-				}
-				}).render('#paypal-button-container');
-				//This function displays Smart Payment Buttons on your web page.
-			</script>
-
-			</div>
-
-
+				
+				
+				</div>
+				</form>
 			</div>
 		</div>
 
