@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Mail;
 
 class CorreoController extends Controller
@@ -66,4 +67,3 @@ class CorreoController extends Controller
         
     // }
 }
-

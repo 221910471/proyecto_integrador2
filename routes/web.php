@@ -134,14 +134,14 @@ Route::name('modificarDirecciones2')->get('modificarDirecciones2/{id}', 'CRUDCon
 
 //------------------------------------------ MIO --------------------------------------------------------------
 
-Route::name('guardarVentas')->get('guardarVentas/{id?}', 'CrudController@guardarVentas');
+Route::name('guardarVentas')->get('guardarVentas/{id?}', 'CRUDController@guardarVentas');
 
 Route::name('detalleUsuario')->get('detalleUsuario/', 'SistemController@detalleUsuario');
 
-Route::name('registrarDireccion')->get('registrarDireccion/{id?}/{cantidad?}', 'SistemController@registrarDireccion');
+// Route::name('registrarDireccion')->get('registrarDireccion/{id?}/{cantidad?}', 'SistemController@registrarDireccion');
 
 
-Route::name('direcciones')->get('direcciones/', 'CrudController@direcciones');
+// Route::name('direcciones')->get('direcciones/', 'CrudController@direcciones');
 
 
 //--------------------------------- Mapas google------------------------------------------
@@ -153,6 +153,5 @@ Route::name('paypal')->get('paypal/', 'SistemController@paypal');
 
 //------------------------------------  Correos con gmail -------------------------
 
-Route::name('correo')->get('correo/', 'CorreoController@correo');
 Route::name('enviar1')->get('enviar1/', 'CorreoController@enviar1');
-
+Route::name('correo')->get('correo/', 'CorreoController@correo');
