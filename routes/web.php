@@ -148,5 +148,5 @@ Route::name('paypal')->get('paypal/', 'SistemController@paypal');
 
 //------------------------------------  Correos con gmail -------------------------
 
-Route::name('enviar1')->get('enviar1/', 'CorreoController@enviar1');
-Route::name('correo')->get('correo/', 'CorreoController@correo');
+Route::get('/sendemail', 'SendEmailController@index');
+Route::post('/sendemail/send', 'SendEmailController@send');
