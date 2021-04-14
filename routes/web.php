@@ -155,3 +155,5 @@ Route::name('paypal')->get('paypal/', 'SistemController@paypal');
 
 Route::name('sendemail')->get('/sendemail', 'SendEmailController@index');
 Route::post('/sendemail/send', 'SendEmailController@send');
+
+Route::get('confirmar_pago', 'PaymentController@confirmar_pago');

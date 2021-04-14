@@ -104,6 +104,7 @@ class PaymentController extends Controller
             if ($link->getRel() == 'approval_url') {
 
                 $redirect_url = $link->getHref();
+
                 break;
 
             }
@@ -116,7 +117,10 @@ class PaymentController extends Controller
         if (isset($redirect_url)) {
 
             /** redirect to paypal **/
+            
             return Redirect::away($redirect_url);
+            alert('Pago realizado');
+
 
         }
 
@@ -148,14 +152,20 @@ class PaymentController extends Controller
 
         if ($result->getState() == 'approved') {
 
+
             \Session::put('success', 'Payment success');
-            return Redirect::to('/');
+            return Redirect::to('confirmar_pago');
+        
 
         }
+        alert('Pago realizado');
 
         \Session::put('error', 'Payment failed');
         return Redirect::to('/');
 
+    }
+    public function confirmar_pago(){
+        return view('templates.confirmar_pago');
     }
 
 }
