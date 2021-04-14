@@ -38,7 +38,14 @@ class LoginController extends Controller
                     
                     return view('templates.iniciar_sesion')
                     ->with($tipo = $session_tipo);
+                    case 2:
                     
+                        return view('templates.home')
+                        ->with($tipo = $session_tipo);
+                        case 3:
+                    
+                            return view('templates.catalogo')
+                            ->with($tipo = $session_tipo);
                     break;
 
             }
