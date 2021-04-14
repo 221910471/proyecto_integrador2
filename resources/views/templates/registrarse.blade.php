@@ -171,20 +171,10 @@
 
                     <div>
                         Tipo de cuenta: <br> <br>
-                        <div>
-                            <input type="radio" id="tipo_usuario" name="tipo_usuario" value="1"
-                                    checked>
-                            <label for="1">Administrador</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="tipo_usuario" name="tipo_usuario" value="2">
+                        <p>Para otros tipos de cuenta contactar con el administrador </p>
+                        <div> 
+                            <input type="radio" id="tipo_usuario" name="tipo_usuario" value="2" checked> 
                             <label for="2">Usuario</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="tipo_usuario" name="tipo_usuario" value="3">
-                            <label for="3">Técnico</label>
                         </div>
                         @if($errors->first('tipo_usuario')) <i>{{$errors -> first ('tipo_usuario')}}</i>@endif
                     </div>

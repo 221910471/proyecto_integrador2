@@ -57,13 +57,20 @@
 					<div class="card">
 						<!-- <img src="{{ asset('img/'.$usu->img) }}" alt="Imagen" width="200" height="200"> -->
 						<div class="container">
-							Nombre : {{ $usu->nombre}} {{ $usu->app}} {{ $usu->apm}} <br>
-							Matricula {{ $usu->matricula}} <br>
-							Fecha de nacimiento: {{ $usu->fn }} <br>
-							Telefono: {{ $usu->tel}} <br>
-							Email: {{ $usu->email }} <br>
-							<br></br>
-							<a href="{{ route('home')}}" class="button big">Regresar al Inicio</a><br>
+						<table>
+							<td><br>
+								<th><h3>Nombre : {{ $usu->nombre}} {{ $usu->app}} {{ $usu->apm}} </th><br>
+							</td>
+							<td>
+								Matricula: {{ $usu->matricula}} <br><br>
+								Fecha de nacimiento: {{ $usu->fn }} <br>
+								Telefono: {{ $usu->tel}} <br>
+								Email: {{ $usu->email }} <br>
+								<br></br>
+								<a href="{{ route('home')}}" class="button big">Regresar al Inicio</a><br>
+
+							</td>
+						</table>
 
 						</div>
 					</div>
